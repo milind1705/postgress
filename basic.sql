@@ -68,3 +68,26 @@ sql_demo=# select 25+13+(78*3);
 sql_demo=# create table movies(movie_id int, movie_name varchar(40), movie_genre varchar(30), imdb_ratings real);
 CREATE TABLE
 sql_demo=#
+
+select * from movies
+insert into movies (movie_id, movie_name, movie_genre, imdb_ratings)
+values(103, '3 idiots', 'romance', 9.8), (104, 'Gajni', 'action, love', '6.5'),
+(105, 'super 30', 'education',9.9);
+update movies
+set movie_name= 'Gang of Wasepur'
+where movie_id = '102'
+
+delete from movies
+where movie_id = 103
+
+select * from Movies
+where imdb_ratings > 5
+
+select * from movies
+where imdb_ratings between 4 and 8;
+
+select * from movies
+where movie_genre = 'education'
+
+select movie_name, movie_genre from movies
+where imdb_ratings > 5.
